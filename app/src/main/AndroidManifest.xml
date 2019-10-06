@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.missouristate.betamen.a004_tomsauto_3">
+
+    <dist:module dist:instant="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="04 Toms Autos"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- MY ACTIVITY CLASS: USED TO INPUT THE CAR PURCHASE INFORMATION -->
+        <activity
+            android:name=".PurchaseActivity"
+            android:label="04 Toms Autos" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LoanSummaryActivity"
+            android:label="04 Toms Autos"
+            android:parentActivityName=".PurchaseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PurchaseActivity" />
+        </activity>
+
+    </application>
+
+</manifest>
